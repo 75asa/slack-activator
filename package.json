@@ -1,0 +1,17 @@
+{
+  "name": "slack-activator",
+  "version": "0.0.0",
+  "description": "activate your Slack online status.",
+  "main": "src/index.js",
+  "repository": "ssh://git@github.com/75asa/slack-activator.git",
+  "author": "75asa <75asa.me@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@types/node": "^17.0.7",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "@slack/web-api": "^6.5.1"
+  }
+}
