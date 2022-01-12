@@ -1,0 +1,19 @@
+name: scheduler
+
+on:
+  schedule:
+    - cron: "0 11 * * 1"
+
+env:
+  SLACK_USER_TOKEN: ${{ secrets.SLACK_USER_TOKEN }}
+  SLACK_USER_ID: ${{ secrets.SLACK_USER_ID }}
+
+
+jobs:
+  scheduler:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        run: |
+          yarn
+          yarn start

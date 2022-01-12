@@ -1,8 +1,11 @@
-import { Slack } from "./Slack";
+import { SlackStatus } from "./SlackStatus";
 
 const main = async () => {
-  const client = new Slack(process.env.SLACK_USER_TOKEN);
-  await client.setStatus("away");
+  const status = new SlackStatus({
+    token: process.env.SLACK_USER_TOKEN,
+    userID: process.env.SLACK_USER_ID,
+  });
+  await status.setStatus("away");
 };
 
 main();
