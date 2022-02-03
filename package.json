@@ -1,8 +1,11 @@
 {
   "name": "slack-activator",
   "version": "0.0.0",
+  "engines": {
+    "node": "17.x"
+  },
   "description": "activate your Slack online status.",
-  "main": "src/index.js",
+  "main": "src/main.js",
   "repository": "ssh://git@github.com/75asa/slack-activator.git",
   "author": "75asa <75asa.me@gmail.com>",
   "license": "MIT",
@@ -10,11 +13,11 @@
     "build": "tsc -p .",
     "lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
     "lint:fix": "yarn lint --fix && prettier --write './{__tests__,src}/**/*.{js,ts}'",
-    "start": "node dist/index.js",
-    "start:setAuto": "node dist/index.js --mode=auto",
-    "start:setAway": "node dist/index.js --mode=away",
-    "dev:setAuto": "ts-node -r tsconfig-paths/register --files src/index.ts --mode=auto",
-    "dev:setAway": "ts-node -r tsconfig-paths/register --files src/index.ts --mode=away"
+    "start": "node dist/main.js",
+    "start:setAuto": "node dist/main.js --mode=auto",
+    "start:setAway": "node dist/main.js --mode=away",
+    "dev:setAuto": "ts-node -r tsconfig-paths/register --files src/main.ts --mode=auto",
+    "dev:setAway": "ts-node -r tsconfig-paths/register --files src/main.ts --mode=away"
   },
   "devDependencies": {
     "@types/node": "^17.0.7",
